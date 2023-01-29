@@ -34,12 +34,13 @@ function main() {
 
     fs.readFile('./input.txt', {encoding: 'utf8'}).then(
         (value) => {
+            const newlineDelim = value.search("\r\n") == -1 ? "\n" : "\r\n";
             // Results in groups of calorie strings per-elf.
-            let perElfCaloriesStrings: string[] = value.split("\r\n\r\n");
+            let perElfCaloriesStrings: string[] = value.split(newlineDelim.repeat(2));
             
             for (let caloriesStoredStr of perElfCaloriesStrings) {
                 // Results in an array of number parsable strings.
-                let elfCalories = caloriesStoredStr.split("\r\n");
+                let elfCalories = caloriesStoredStr.split(newlineDelim);
                 let newElf = new ElfCalorieEntry();
 
                 for (let calorieStr of elfCalories) {
