@@ -1,0 +1,12 @@
+{
+  "name": "AdventOfCode01-ts",
+  "version": "1.0.0",
+  "description": "Code challenge 1 from AdventOfCode",
+  "main": "index.js",
+  "repository": "https://github.com/OnlineCodeChallenges/AdventOfCode01-ts",
+  "author": "cjb867@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.11.18"
+  }
+}
